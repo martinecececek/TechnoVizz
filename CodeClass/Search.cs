@@ -33,6 +33,21 @@ namespace Technovizz.CodeClass
             return null;
         }
 
+        public static List<Project> GetProjectContainMaterial(string parameter, List<Project> projects)
+        {
+            var list = new List<Project>();
+
+            foreach (var project in projects)
+            {
+                if (project.Material.ContainParemeter(parameter))
+                {
+                    list.Add(project);
+                }
+            }
+
+            return list;
+        }
+
 
     }
 }

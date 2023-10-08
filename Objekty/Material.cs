@@ -15,5 +15,15 @@ namespace Technovizz.Objekty
         public String Nazev { get; set; }
         public String TypPripravku { get; set; }
 
+        public bool ContainParemeter(string parametr)
+        {
+            if (SAP == parametr || Nazev == parametr)
+            {
+                return true;
+            }
+            return false;
+        }
+
+
     }
 }
