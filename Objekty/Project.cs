@@ -25,8 +25,5 @@ namespace Technovizz.Objekty
         public String Temp { get; set; }
         public String Trh { get; set; }
         public String IMDS { get; set; }
-
-
-
     }
 }

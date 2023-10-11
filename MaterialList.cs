@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -13,7 +14,6 @@ namespace Technovizz
 
         public async Task<List<Material>> GetMaterials()
         {
-
             //declare the list where the metod's are placed so i can work with data in it
             Excel.Application excelApp = Globals.ThisWorkbook.Application;
             Excel.Worksheet worksheet = excelApp.ActiveSheet as Excel.Worksheet;
@@ -21,20 +21,23 @@ namespace Technovizz
             //get parametr of number where to end iterarion and where start another thread iteration
             int iterateTo = Columns.Count / 2;
 
+            Debug.WriteLine("iterate numbers to " + iterateTo);
+
             //create and get ready all the threads
             List<Material> materials1 = new List<Material>();
-            Thread getData1 = new Thread(() => { materials1 = GetData(1, iterateTo); });
+            Thread thradGetData1 = new Thread(() => { materials1 = GetData(1, iterateTo); });
 
             List<Material> materials2 = new List<Material>();
-            Thread getData2 = new Thread(() => { materials2 = GetData(iterateTo, Columns.Count); });
-
+            Thread threadGetData2 = new Thread(() => { materials2 = GetData(iterateTo, Columns.Count); });
 
             //start thread's and wait to complete them
-            getData1.Start();
-            getData2.Start();
+            thradGetData1.Start();
+            threadGetData2.Start();
 
-            getData1.Join();
-            getData2.Join();
+            thradGetData1.Join();
+            threadGetData2.Join();
+
+            Debug.WriteLine("thread's are done");
 
             //combine two mateials toggether so i can return the list of materials
             List<Material> list = materials1.Concat(materials2).ToList();
@@ -80,26 +83,7 @@ namespace Technovizz
             return list;
         }
 
-
-
-
-        private void List2_Shutdown(object sender, System.EventArgs e)
-        {
-        }
-
-        #region Kód vygenerovaný Návrhářem VSTO
-
-        /// <summary>
-        /// Metoda vyžadovaná pro podporu Návrháře - neupravovat
-        /// obsah této metody v editoru kódu.
-        /// </summary>
-        private void InternalStartup()
-        {
-            this.Startup += new System.EventHandler(List2_Startup);
-            this.Shutdown += new System.EventHandler(List2_Shutdown);
-        }
-
-        #endregion
+        private void List2_Shutdown(object sender, System.EventArgs e) { }
 
     }
 }
