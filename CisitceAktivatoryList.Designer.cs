@@ -13,9 +13,9 @@ namespace Technovizz {
     
     
     /// 
-    [Microsoft.VisualStudio.Tools.Applications.Runtime.StartupObjectAttribute(4)]
+    [Microsoft.VisualStudio.Tools.Applications.Runtime.StartupObjectAttribute(3)]
     [global::System.Security.Permissions.PermissionSetAttribute(global::System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")]
-    public sealed partial class KluzkyLak : Microsoft.Office.Tools.Excel.WorksheetBase {
+    public sealed partial class CisitceAktivatoryList : Microsoft.Office.Tools.Excel.WorksheetBase {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "17.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
@@ -23,8 +23,8 @@ namespace Technovizz {
         /// 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public KluzkyLak(global::Microsoft.Office.Tools.Excel.Factory factory, global::System.IServiceProvider serviceProvider) : 
-                base(factory, serviceProvider, "List5", "List5") {
+        public CisitceAktivatoryList(global::Microsoft.Office.Tools.Excel.Factory factory, global::System.IServiceProvider serviceProvider) : 
+                base(factory, serviceProvider, "List4", "List4") {
         }
         
         /// 
@@ -33,7 +33,7 @@ namespace Technovizz {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void Initialize() {
             base.Initialize();
-            Globals.KluzkyLak = this;
+            Globals.CisitceAktivatoryList = this;
             global::System.Windows.Forms.Application.EnableVisualStyles();
             this.InitializeCachedData();
             this.InitializeControls();
@@ -148,15 +148,15 @@ namespace Technovizz {
     
     internal sealed partial class Globals {
         
-        private static KluzkyLak _KluzkyLak;
+        private static CisitceAktivatoryList _CisitceAktivatoryList;
         
-        internal static KluzkyLak KluzkyLak {
+        internal static CisitceAktivatoryList CisitceAktivatoryList {
             get {
-                return _KluzkyLak;
+                return _CisitceAktivatoryList;
             }
             set {
-                if ((_KluzkyLak == null)) {
-                    _KluzkyLak = value;
+                if ((_CisitceAktivatoryList == null)) {
+                    _CisitceAktivatoryList = value;
                 }
                 else {
                     throw new System.NotSupportedException();

@@ -19,7 +19,7 @@ namespace Technovizz
             Excel.Worksheet worksheet = excelApp.ActiveSheet as Excel.Worksheet;
 
             //get parametr of number where to end iterarion and where start another thread iteration
-            int iterateTo = Columns.Count / 2;
+            int iterateTo = Rows.Count / 2;
 
             Debug.WriteLine("iterate numbers to " + iterateTo);
 

@@ -5,7 +5,7 @@ namespace Technovizz.Objekty
 {
     public class KluzkyLak
     {
-        public KluzkyLak(string nazev, string jeAktivni, string vyrobce, string pouziti, List<string> nevhodneKombinace, string slozeniDle, List<string> slozeni)
+        public KluzkyLak(string nazev, string jeAktivni, string vyrobce, string pouziti, string nevhodneKombinace, string slozeniDle, List<string> slozeni)
         {
             Nazev = nazev;
             JeAktivni = jeAktivni;
@@ -20,7 +20,7 @@ namespace Technovizz.Objekty
         public String JeAktivni { get; set; }
         public String Vyrobce { get; set; }
         public String Pouziti { get; set; }
-        public List<String> NevhodneKombinace { get; set; }
+        public String NevhodneKombinace { get; set; }
         public String SlozeniDle { get; set; }
 
         /* V JAKEM PORADI JSOU DATA ULOZENA: 

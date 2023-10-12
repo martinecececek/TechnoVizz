@@ -15,7 +15,7 @@ namespace Technovizz {
     /// 
     [Microsoft.VisualStudio.Tools.Applications.Runtime.StartupObjectAttribute(6)]
     [global::System.Security.Permissions.PermissionSetAttribute(global::System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")]
-    public sealed partial class Granulaty : Microsoft.Office.Tools.Excel.WorksheetBase {
+    public sealed partial class GranulatyList : Microsoft.Office.Tools.Excel.WorksheetBase {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "17.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
@@ -23,7 +23,7 @@ namespace Technovizz {
         /// 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public Granulaty(global::Microsoft.Office.Tools.Excel.Factory factory, global::System.IServiceProvider serviceProvider) : 
+        public GranulatyList(global::Microsoft.Office.Tools.Excel.Factory factory, global::System.IServiceProvider serviceProvider) : 
                 base(factory, serviceProvider, "List6", "List6") {
         }
         
@@ -33,7 +33,7 @@ namespace Technovizz {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void Initialize() {
             base.Initialize();
-            Globals.Granulaty = this;
+            Globals.GranulatyList = this;
             global::System.Windows.Forms.Application.EnableVisualStyles();
             this.InitializeCachedData();
             this.InitializeControls();
@@ -148,15 +148,15 @@ namespace Technovizz {
     
     internal sealed partial class Globals {
         
-        private static Granulaty _Granulaty;
+        private static GranulatyList _GranulatyList;
         
-        internal static Granulaty Granulaty {
+        internal static GranulatyList GranulatyList {
             get {
-                return _Granulaty;
+                return _GranulatyList;
             }
             set {
-                if ((_Granulaty == null)) {
-                    _Granulaty = value;
+                if ((_GranulatyList == null)) {
+                    _GranulatyList = value;
                 }
                 else {
                     throw new System.NotSupportedException();

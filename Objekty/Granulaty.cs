@@ -4,7 +4,7 @@ namespace Technovizz.Objekty
 {
     public class Granulaty
     {
-        public Granulaty(string nazev, string typ, string xk, string jeAktivni, string vyrobceDodavatel, string pouziti, string kombinaceS, string cisteni, List<string> nevhodneKombinace, string slozeniDle, List<string> slozeni)
+        public Granulaty(string nazev, string typ, string xk, string jeAktivni, string vyrobceDodavatel, string pouziti, string kombinaceS, string cisteni, string nevhodneKombinace, string slozeniDle, List<string> slozeni)
         {
             Nazev = nazev;
             Typ = typ;
@@ -28,7 +28,7 @@ namespace Technovizz.Objekty
         public String Pouziti { get; set; }
         public String KombinaceS { get; set; }
         public String Cisteni { get; set; }
-        public List<String> NevhodneKombinace { get; set; }
+        public String NevhodneKombinace { get; set; }
         public String SlozeniDle { get; set; }
 
         /* V JAKEM PORADI JSOU DATA ULOZENA: 
