@@ -31,7 +31,7 @@ namespace Technovizz.Objekty
         public String NevhodneKombinace { get; set; }
         public String SlozeniDle { get; set; }
 
-        /* V JAKEM PORADI JSOU DATA ULOZENA: 
+        /* V JAKÉM POŘADÍ JSOU DATA ULOŽENA: 
           0 - 2,2,6,6-tetramethyl-4-piperidinestery C12-21 a C18 
           1 -nenasyc.MK	4,4'-isopropylidendifenol	
           2 - 4,5-dichloro-2-oktyl-3(2H)-isothiazolon (DCOIT)	

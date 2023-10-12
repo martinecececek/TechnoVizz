@@ -23,7 +23,7 @@ namespace Technovizz.Objekty
         public String NevhodneKombinace { get; set; }
         public String SlozeniDle { get; set; }
 
-        /* V JAKEM PORADI JSOU DATA ULOZENA: 
+        /* V JAKÉM POŘADÍ JSOU DATA ULOŽENA: 
          0 - 1,2-benzoisothiazol-3(2H)-on
          1 - 2-(diethylamino)ethan-1-ol
          2 - alifatický alkohol

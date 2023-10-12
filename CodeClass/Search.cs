@@ -5,8 +5,7 @@ namespace Technovizz.CodeClass
 {
     public class Search
     {
-
-        //hleda material podel Nazvu || SAP a pokud najde shodu 
+        //Hledání materiálu podle 'Nazev' || 'SAP' pokud najde shodu
         public static Material GetMaterial(string parametr, List<Material> materials)
         {
             foreach (var material in materials)

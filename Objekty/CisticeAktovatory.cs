@@ -23,7 +23,7 @@ namespace Technovizz.Objekty
         public String NevhodneKombinace { get; set; }
         public String SlozeniDle { get; set; }
 
-        /* V JAKEM PORADI JSOU DATA ULOZENA: 
+        /* V JAKÉM POŘADÍ JSOU DATA ULOŽENA:
          0 - 1,3-dioxolan
          1 - (3-aminopropyl)triethoxysilan
          2 - 3-(trimethoxysilyl)-1-propanthiol
